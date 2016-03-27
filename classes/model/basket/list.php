@@ -25,6 +25,7 @@ class Model_Basket_List extends ORM_Base {
 			'name' => 'Name',
 			'count' => 'Count',
 			'price' => 'Price',
+			'discount' => 'Discount',
 		);
 	}
 
@@ -52,6 +53,9 @@ class Model_Basket_List extends ORM_Base {
 			),
 			'price' => array(
 				array('not_empty'),
+				array('max_length', array(':value', 255)),
+			),
+			'discount' => array(
 				array('max_length', array(':value', 255)),
 			),
 		);

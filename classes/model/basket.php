@@ -16,6 +16,7 @@ class Model_Basket extends ORM_Base {
 	public function labels()
 	{
 		return array(
+			'id' => 'Order №',
 			'user_id' => 'User',
 			'email' => 'E-mail',
 			'phone' => 'Phone',
@@ -34,10 +35,12 @@ class Model_Basket extends ORM_Base {
 				array('digit'),
 			),
 			'email' => array(
+				array('not_empty'),
 				array('max_length', array(':value', 255)),
 				array('email'),
 			),
 			'phone' => array(
+				array('not_empty'),
 				array('max_length', array(':value', 255)),
 				array('phone'),
 			),

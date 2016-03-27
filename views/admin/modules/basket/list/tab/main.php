@@ -43,3 +43,16 @@
 			'class' => 'input-xxlarge',
 		)),
 	));
+	
+/**** discount ****/
+	
+	echo View_Admin::factory('form/control', array(
+		'field' => 'discount',
+		'errors' => $errors,
+		'labels' => $labels,
+		'required' => $required,
+		'controls' => Form::input('discount', $orm->discount, array(
+			'id' => 'discount_field',
+			'class' => 'input-xxlarge',
+		)),
+	));

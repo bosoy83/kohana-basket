@@ -4,6 +4,20 @@
 	$labels = $orm->labels();
 	$required = $orm->required_fields();
 
+
+/**** id ****/
+	
+	echo View_Admin::factory('form/control', array(
+		'field' => 'id',
+		'errors' =>	$errors,
+		'labels' =>	$labels,
+		'required' => $required,
+		'controls' => Form::input('_id', $orm->id, array(
+			'id' => 'id_field',
+			'class' => 'input-xxlarge',
+			'readonly' => 'readonly',
+		)),
+	));
 	
 /**** status ****/
 	
